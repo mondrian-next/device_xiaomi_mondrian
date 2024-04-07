@@ -7,11 +7,15 @@
 # Inherit from mondrian device
 $(call inherit-product, device/xiaomi/mondrian/device.mk)
 
-# Inherit from common lineage configuration
-TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common Evolution X configuration
+BUILD_WITH_GAPPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BUILD_APERTURE_CAMERA := false
+TARGET_SUPPORTS_QUICK_TAP := true
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_mondrian
+## Device identifier
+PRODUCT_NAME := evolution_mondrian
 PRODUCT_DEVICE := mondrian
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
