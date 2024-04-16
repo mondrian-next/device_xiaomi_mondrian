@@ -13,6 +13,9 @@ $(call inherit-product, vendor/xiaomi/mondrian/mondrian-vendor.mk)
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
+# Lawnchair
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureResMondrian \
