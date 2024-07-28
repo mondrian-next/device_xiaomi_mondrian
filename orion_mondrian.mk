@@ -7,10 +7,23 @@
 # Inherit from mondrian device
 $(call inherit-product, device/xiaomi/mondrian/device.mk)
 
+# OrionOS stuff
+ORION_MAINTAINER := NextWorks
+ORION_MAINTAINER_LINK := https://t.me/NextROMS
+ORION_GAPPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_HAS_UDFPS := true
+
+# Common flags
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true
+
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_mondrian
+PRODUCT_NAME := orion_mondrian
 PRODUCT_DEVICE := mondrian
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
